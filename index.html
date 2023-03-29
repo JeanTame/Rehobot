@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Accueil</title>
 </head>
 
@@ -227,47 +228,45 @@
         <h1> Me Contacter</h1>
         <p>N'hésitez pas à nous contacter, nous vous répondrons dans les plus court délais</p>
     
-        <form method="" action="javascript:sendMail()">
-            <table border="0" cellspacing="1" width="400">
-                <tr>
-                    <td width="98">Destinataire</td>
-                    <td width="295">
-                        <input type="text" id="edTo" size="39"></td>
-                </tr>
-                <tr>
-                    <td width="98">Sujet</td>
-                    <td width="295">
-                        <input type="text" id="edSubject" size="39"></td>
-                </tr>
-                <tr>
-                    <td width="98">Message</td>
-                    <td width="295">
-                        <textarea rows="3" id="edBody" cols="33"></textarea></td>
-                </tr>
-            </table>
-            <br>
-            <input type="submit" value="Envoyer" >
-        </form>
+        <div class="formCard">
+            <form class="form" action="javascript:sendMail()">
+                <div class="group">
+                    <input placeholder="‎" type="text" id="name">
+                    <label for="name">Votre nom</label>
+                </div>
+                <div class="group">
+                    <input placeholder="‎" type="text" id="phoneMail" name="email" >
+                    <label for="email">Vorte Email ou Numéro de téléphone</label>
+                    </div>
+                <div class="group">
+                    <textarea placeholder="‎" id="edBody" name="comment" rows="5" required=""></textarea>
+                    <label for="comment">Votre commande</label>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
 
         <script language="Javascript" type="text/javascript">
             function sendMail() {
                 // <!--Tester les donnees-->
-                if (document.getElementById("edTo").value.length==0) {
-                    alert("Saisir l'adresse du destinataire !!!");
+                if (document.getElementById("name").value.length==0) {
+                    alert("Veuillez compléter le formulaire !!");
                     return;
                 }
-                if (document.getElementById("edSubject").value.length==0) {
-                    alert("Saisir le titre !!!");
+                if (document.getElementById("phoneMail").value.length==0) {
+                    alert("Veuillez compléter le formulaire !!");
                     return;
                 }
                 if (document.getElementById("edBody").value.length==0) {
-                    alert("Ecrire le message !!!");
+                    alert("Veuillez compléter le formulaire !!!");
                     return;
                 }
                 // <!--Encoder l'url mailto-->
-                var url="mailto:"+encodeURIComponent(document.getElementById("edTo").value)
-                    +"?subject="+encodeURIComponent(document.getElementById("edSubject").value)
-                    +"&body="+encodeURIComponent(document.getElementById("edBody").value);
+                var url="mailto:"+"luc.ndzamba@gmail.com"
+                    +"?subject="+"RehobotCosmetic"
+                    +"&body="+"Nom du client : "+encodeURIComponent(document.getElementById("name").value)+"%0A"
+                        +"Mail ou numéro de téléphone du client : "+encodeURIComponent(document.getElementById("phoneMail").value)+"%0A"+"%0A"
+                        +"Message du client : "+encodeURIComponent(document.getElementById("edBody").value)+"%0A";
                 // <!--Ouvrir client messagerie-->
                 document.location=url;
             }

@@ -231,7 +231,7 @@ nav li {
  .contact{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;

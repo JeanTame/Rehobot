@@ -33,6 +33,7 @@
 
         <div class="first">
             <div class="cindella">
+                <!-- <img src="/source/Cindella.webp" alt=""> -->
                 <p>
                     Cindella
                 </p>
@@ -65,34 +66,53 @@
 
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
 
         <title>
             Contact
         </title>
              
-        <h2>
-            Contact
-        </h2>
-
-        <div class="deux">
-            <div class="num">
-                <p>
-                    Contactez moi au +33 6 59 16 85 94
-                </p>
-                
-            </div>
-
-            <div class="mail">
-
-            </div>
-        </div>
-
-    </div>
-
-    <footer>
-
-    </footer>
+        <h1> Me Contacter</h1>
+        <p>N'hésitez pas à nous contacter, nous vous répondrons dans les plus court délais</p>
     
+        <form method="post" action="mail.php">
+    
+          <label for="name">Name : </label>
+          <input type="text" name="name" id="name">
+    
+          <label for="email">Email : </label>
+          <input type="email" name="email" id="email">
+    
+          <label for="sujet">Sujet : </label>
+          <input type="text" name="sujet" id="sujet">
+    
+          <label for="message">Message : </label>
+          <textarea name="message" id="message" rows="10" cols="30 "></textarea>
+    
+          <input type="submit" value="Envoyer">
+    
+        </form>
+      </div>
+    
+      <footer>
+        <div class="footer-content">
+          <h3>Dream Hair</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates impedit modi quam aliquam hic corrupti aut saepe! Vitae assumenda distinctio natus sequi, ipsa omnis fugit provident soluta, amet earum commodi.</p>
+    
+          <ul class="socials">
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/dreamhair35/?hl=fr" target="blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-google"></i></a></li>
+            <li><a href=""><i class="fa fa-youtube"></i></a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-bottom">
+          <p>copyright &copy;2022 DreamHair. Designed by <span>Lxck</span></p>
+        </div>
+      </footer>
+
 </body>
 </html>

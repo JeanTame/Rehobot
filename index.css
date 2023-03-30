@@ -239,6 +239,22 @@ nav li {
     height: auto;
  }
 
+ .cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+ }
+
+ .ref {
+  display: flex;
+ }
+
+ .ref a {
+  text-decoration: none;
+  color: #000000;
+ }
+
  .formCard {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;

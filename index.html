@@ -228,30 +228,33 @@
         <h1> Me Contacter</h1>
         <p>N'hésitez pas à nous contacter, nous vous répondrons dans les plus court délais</p>
 
-
-        <div class="numero">
-            <p>Me contacter par téléphone </p>
-            <a href="tel:0611223344">Cliquez ici pour composer le numéro</a>
-                <p>Contactez moi au 0659168594</p>
-        </div>
+        <div class="cont">
+            <div class="numero">
+                <p>Me contacter par téléphone </p>
     
-        <div class="formCard">
-            <p>Me contacter par mail </p>
-            <form class="form" action="javascript:sendMail()">
-                <div class="group">
-                    <input placeholder="‎" type="text" id="name">
-                    <label for="name">Votre nom</label>
+                <div class="ref">
+                    <p>Contactez moi au </p><a href="tel:0611223344"><span>: 0611223344</span></a>
                 </div>
-                <div class="group">
-                    <input placeholder="‎" type="text" id="phoneMail" name="email" >
-                    <label for="email">Vorte Email ou Numéro de téléphone</label>
+            </div>
+        
+            <div class="formCard">
+                <p>Me contacter par mail </p>
+                <form class="form" action="javascript:sendMail()">
+                    <div class="group">
+                        <input placeholder="‎" type="text" id="name">
+                        <label for="name">Votre nom</label>
                     </div>
-                <div class="group">
-                    <textarea placeholder="‎" id="edBody" name="comment" rows="5" required=""></textarea>
-                    <label for="comment">Votre commande</label>
-                </div>
-                <button type="submit">Envoyer</button>
-            </form>
+                    <div class="group">
+                        <input placeholder="‎" type="text" id="phoneMail" name="email" >
+                        <label for="email">Vorte Email ou Numéro de téléphone</label>
+                        </div>
+                    <div class="group">
+                        <textarea placeholder="‎" id="edBody" name="comment" rows="5" required=""></textarea>
+                        <label for="comment">Votre commande</label>
+                    </div>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
         </div>
 
     </div>
